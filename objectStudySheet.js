@@ -162,3 +162,144 @@ function sayMyAge() {
 sayMyAge()
 
 // TODO: JavaScript OBJECT METHODS
+
+// modifying a property using . or [] notations
+
+const mondayMenu = {
+    cheesePlate: {
+        soft: 'Chevre',
+        semiSoft: 'Gruyere',
+        hard: 'Manchego',
+    },
+    fries: 'Curly',
+    salad: 'Cobb',
+}
+
+// Destructive method:
+//mondayMenu.fries = 'Sweet potato'
+//console.log(mondayMenu)
+
+function destructivelyUpdateObject(obj, key, value) {
+    obj[key] = value
+    return obj
+}
+
+const tuesdayMenu = destructivelyUpdateObject(mondayMenu, 'salad', 'Caesar')
+//console.log(tuesdayMenu)
+
+// try the mondayMenu now! it's been destructeded
+console.log(mondayMenu.salad)
+
+// how can we be non-destructive? SPREAD IT OUT ...
+
+/*
+function nonDestructivelyUpdateObject(obj, key, value) {
+    const newObj = { ...obj }
+    newObj[key] = value
+    return newObj
+}
+*/
+
+// by restructuring the above function we have made it "cleaner"
+// it still calls upon the obj, key, and value
+// instead of a "newObject" we return the spread of the obj : see line 209
+
+function nonDestructivelyUpdateObject(obj, key, value) {
+    return {
+        ...obj,
+        [key]: value,
+    }
+}
+
+const sundayMenu = nonDestructivelyUpdateObject(
+    tuesdayMenu,
+    'fries',
+    'Shoestring'
+)
+
+// by spreading it out we were able to recall the tuesday menu without issue!
+
+console.log(tuesdayMenu.fries)
+console.log(sundayMenu.fries)
+
+// non destructive tends to be more performant
+
+// Remove a property from an object with the delete operator!
+
+const wedMenu = {
+    cheesePlate: {
+        soft: 'Brie',
+        semiSoft: 'Fontina',
+        hard: 'Provolone',
+    },
+    fries: 'Sweet Potato',
+    salad: 'Southwestern',
+}
+
+// arrays are special types of objects
+// we can set properties on an array just like an object
+
+const myArray = []
+myArray.summary = ['Empty array!']
+
+console.log(myArray)
+
+myArray['summary'] = 'this array is totally empty.'
+
+console.log(myArray)
+console.log(myArray.summary)
+
+// you can even .push(), unshift(), etc... in both arrays/objects
+
+myArray.push('Never gonna give you up!', 123123345)
+console.log(myArray)
+
+console.log(myArray.length)
+
+console.log(myArray[0])
+
+// an ARRAY is special. it has Array-Style Elements that get stored separately from it's Object style properties.
+// so that's why when using length we get 2. It's the 2 items in the "special list"
+
+//TODO: if we add a new property to an array that has a key of 0,
+//      how does JS engine know whetherit should be an Object style property or an Array style element???
+
+/*
+const newArray = []
+
+newArray[0] = 'Will this be an `Object` property or an `Array` element?'
+newArray[1] = 'Hinga Dinga Dergin McJankenJerbenManJensen'
+
+console.log(newArray.length)
+
+console.log(typeof newArray)
+console.log(newArray[0])
+console.log(newArray[1])
+*/
+
+//TODO: FUNDAMENTAL TRUTH: ALL KEYS IN OBJECTS AND ALL INDEXES IN ARRAYS ARE ACTUALLY STRINGS.
+
+const truthArray = ['The', 'Only', 'Truth', 'Is', 'The', 'Number', 42]
+
+truthArray['1'] = 'Absolute'
+
+console.log(truthArray)
+
+truthArray['1'] = 'Based'
+
+console.log(truthArray)
+
+console.log(truthArray[01])
+console.log(truthArray['01'])
+
+console.log(truthArray.length)
+
+console.log(Object.keys(truthArray))
+
+/*
+For accessing elements in an Array, always use integers.
+Be wary of setting Object-style properties on an Array. 
+There's rarely any reason to, and it's usually more trouble than it's worth.
+Remember that all Object keys, including Array indexes, are strings. 
+This will really come into play when we learn how to iterate over Objects, so keep it in the back of your mind.
+*/
