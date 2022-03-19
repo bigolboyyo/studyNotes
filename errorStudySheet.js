@@ -24,6 +24,6 @@ Uncaught TypeError: Assignment to constant variable
 // you attempted to assign a new value to a var declared with const
 // this can also simply just be a very small typo
 
-
+// for stack trace see errors.js in dir nodeJSBugger
 
 
