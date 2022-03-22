@@ -100,3 +100,25 @@ cycleArray(nestedObject)
 function functionName(parameter1, parameter2, parameter3) {
     //body code goes here
 }
+
+// most common way to define a function is with a
+// FUNCTION DECLARATION
+
+function razzle() {
+    console.log("You've been  razzled!")
+}
+
+// the word RAZZLE become a pointer to some stored, potential, not yet
+// actually run bit of work (the function)
+// the pointer is used 'call' or 'invoke' the function. using ()
+
+// YOU CAN WRITE FUNCTION DECLARATIONS AFTER YOU CALL them
+// HOISTING
+
+//TODO: FUNCTION EXPRESSION FUN
+
+// programming languages feature EXPRESSIONS: which are
+// arrangements of constants, variables, and symbols
+// that after interpretation produce a value
+
+// functions require a funtion NAME
