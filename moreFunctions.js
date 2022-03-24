@@ -1,3 +1,5 @@
+/*
+
 // continued studies of functions in JavaScript functions
 
 // sayHi() // you can run and invoke your function even before the function is declared!!
@@ -10,6 +12,7 @@ function sayHi(name) {
 // hiRose() /* notice how calling the hiRose function doesn't work here */
 // this is because of HOISTING
 
+/*
 const hiRose = function () {
     console.log('Hi Rose')
 }
@@ -17,12 +20,12 @@ const hiRose = function () {
 
 // hiRose() /* this one calls because we declared an anonymous function and defined it before this
 
-const doMath = function (number, num2) {
+/*const doMath = function (number, num2) {
     /*console.log(number * num2)*/
-    return (
-        number * num2
-    ) /* will complete this operation before returning the value */
-}
+//return (
+//     number * num2
+//  ) /* will complete this operation before returning the value */
+// }
 console.log(doMath(5, 5))
 
 //NOTE: Using return is needed if we want the value of our function to be "interactable"
@@ -120,5 +123,10 @@ function razzle() {
 // programming languages feature EXPRESSIONS: which are
 // arrangements of constants, variables, and symbols
 // that after interpretation produce a value
-
+/*
 // functions require a funtion NAME
+*/
+
+//TODO: DEFINE IIFE: Immediately-Invoked Function Expression
+
+//TODO: DEFINE FIRST CLASS FUNCTIONS
