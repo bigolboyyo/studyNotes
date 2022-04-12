@@ -1,0 +1,65 @@
+<!--Study notes for html forms-->
+
+<!--
+<form action="http://example.com/process-user.php" method="GET">
+  <input type="text" name="owner-name" placeholder="Wes" />
+  <input type="text" name="dog-name" placeholder="puppers" />
+  <input type="text" name="favorite-toy" placeholder="chew toy" />
+  <input type="submit" value="submit" />
+</form>
+-->
+
+<!--action POST. input/labels for name/placeholders and take note of passwords and submit buttons-->
+
+<form action="http://example.com/process-user.php" method="POST">
+  <label for="password">Whats the password?</label>
+  <input type="password" id="password" placeholder="Enter your password here" />
+  <br></br>
+  <!--bad form. better alternatives to <br>-->
+  <label for="text1">Hello?</label>
+  <input type="text1" id="text1" placeholder="Y/N" name="owner-name" />
+  <br></br>
+  <label for="text2">Phone Number</label>
+  <input type="text2" id="text2" placeholder="gimme" name="dog-name" />
+  <br></br>
+  <label for="text3">YOUR SOCIAL MWUAHAHA</label>
+  <input type="password" id="text3" placeholder="tis a joke!" name="favorite-toy" />
+  <br></br>
+  <input type="submit" value="404 button" />
+</form>
+<label for="tel">Where should E.T. &trade; Phone Home?</label>
+<input id="tel" type="tel" name="phone" placeholder="Phone Number" />
+<input type="submit" value="phone home" />
+
+<!--radio box!! select one circles-->
+
+<h3>Does your dog get along with other dogs?</h3>
+<input type="radio" name="plays-well-with-others" value="high" /> The more dogs, the better!<br />
+<input type="radio" name="plays-well-with-others" value="medium" /> It depends on the dog, but generally they are ok
+<br />
+<input type="radio" name="plays-well-with-others" value="low" /> My dog prefers their walkies solo<br />
+
+<!--checkboxes!! can select multiple-->
+
+<h3>What are your dogs favorite toys?</h3>
+<input type="checkbox" name="toy-1" value="kong" /> Kong <br />
+<input type="checkbox" name="toy-2" value="stuffed-animals" />Stuffed Animals<br />
+<input type="checkbox" name="toy-3" value="rope-toys" />Rope Toys<br />
+<input type="checkbox" name="toy-4" value="squeaky-toys" />Squeaky Toys<br />
+<input type="checkbox" name="toy-5" value="balls" />Balls, Frisbees, anything a dog can fetch!<br />
+
+<!--Select menus. create a drop down menu. value in relation to the name-->
+
+<h3>What size is your dog?</h3>
+<select name="size">
+    <option value="small" selected>Small(0-25 pounds)</option>
+    <option value="medium">Medium (26-50 pounds)</option>
+    <option value="large">Large (51-75 pounds)</option>
+    <option value="x-large">Extra Large (over 75 pounds)</option>
+    <input type="submit" value="submit" />
+</select>
+
+<!--Text areas-->
+
+<h3>Any other things we should know about your dog?</h3>
+<textarea name="message"></textarea>
